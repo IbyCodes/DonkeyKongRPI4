@@ -1,6 +1,6 @@
-// ASSIGNMENT # 4 DONKEY KONG GAME
-// Mohammad Ibrahim Khan 30103764
-// Osama Hameed 30065210
+// DONKEY KONG ADVENTURE RPI4
+// Mohammad Ibrahim Khan 
+// Osama Hameed
 
 #include <unistd.h>
 #include <stdio.h>
