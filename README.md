@@ -1,5 +1,5 @@
 # DonkeyKongRPI4
-A custom-made Donkey Kong game to run with Bare-Metal Raspberry Pi 4
+A custom-made Donkey Kong game to run with Bare-Metal Raspberry Pi 4 in C
 
 REQUIRED:
 1 SNES Controller directly connected to the RPI4
