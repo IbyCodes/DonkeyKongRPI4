@@ -90,13 +90,13 @@ https://www.nicepng.com/downpng/u2q8a9u2w7o0e6u2_donkey-kong-png-transparent-don
 #define CLK 11
 #define DAT 10
 
-// Directly from https://d2l.ucalgary.ca/d2l/le/content/500758/viewContent/5668893/View(CPSC 359 RPi 2 SNES Slides)
+
 #define GPIO_BASE 0xFE200000
 #define CLO_REG 0xFE003004 // WAIT register
 
 static unsigned *gpio = (unsigned*)GPIO_BASE;
 
-// GPIO setup macros. Always use INP_GPIO(x) before using OUT_GPIO(x) or SET_GPIO_ALT(x,y) (From RPi 1 GPIO Slides)
+// GPIO setup macros. Always use INP_GPIO(x) before using OUT_GPIO(x) or SET_GPIO_ALT(x,y) 
 
 #define INP_GPIO(g) *(gpio+((g)/10)) &= ~(7<<(((g)%10)*3))
 #define OUT_GPIO(g) *(gpio+((g)/10)) |= (1<<(((g)%10)*3))
@@ -226,7 +226,7 @@ int Read_Data() {
 }
 
 
-// Waits for a time interval, passed as a parameter (directly from slides: https://d2l.ucalgary.ca/d2l/le/content/500758/viewContent/5668893/View)
+// Waits for a time interval, passed as a parameter 
 void Wait(int time) {
     unsigned *clo = (unsigned*)CLO_REG;
     unsigned c = *clo + time; // in micro seconds
@@ -234,7 +234,7 @@ void Wait(int time) {
 }
 
  
-// Reading the SNES controller inputs (pseudocode followed from D2L slides: https://d2l.ucalgary.ca/d2l/le/content/500758/viewContent/5668893/View)
+// Reading the SNES controller inputs 
 int* Read_SNES() {
     int i;
     static int buttonsPressed[15]; // a integer array to store all of the buttons and keep track of what button has been pressed
